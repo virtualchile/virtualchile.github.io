@@ -36,7 +36,7 @@ var loader = new THREE.OBJLoader();
 // load a resource
 loader.load(
 	// resource URL
-	'icosa.obj',
+	'js/icosa.obj',
 	// Function when resource is loaded
 	function ( icosa ) {
     material2 = new THREE.MeshNormalMaterial();
