@@ -7,7 +7,7 @@ renderer.setClearColor( 0x213055 );
 renderer.setPixelRatio( window.devicePixelRatio );
 document.body.appendChild( renderer.domElement );
 
-camera.position.z = 100;
+camera.position.z = 500;
 
 // //-- Top Light
 // var directionalLight = new THREE.DirectionalLight( 0x3b6adf, 0.5 );
@@ -41,7 +41,7 @@ loader.load(
 	function ( icosa ) {
     material2 = new THREE.MeshNormalMaterial();
     var icosaMesh = new THREE.Mesh( icosa, material2 );
-		scene.add( icosaMesh );
+		scene.add( icosa );
 	}
 );
 
