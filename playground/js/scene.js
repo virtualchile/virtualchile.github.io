@@ -39,7 +39,8 @@ loader.load(
 	'icosa.obj',
 	// Function when resource is loaded
 	function ( icosa ) {
-    var icosaMesh = new THREE.Mesh( icosa, material );
+    material2 = new THREE.MeshNormalMaterial();
+    var icosaMesh = new THREE.Mesh( icosa, material2 );
 		scene.add( icosaMesh );
 	}
 );
