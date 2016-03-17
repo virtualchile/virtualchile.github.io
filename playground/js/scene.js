@@ -41,7 +41,7 @@ loader.load(
 	function ( icosa ) {
     material2 = new THREE.MeshNormalMaterial();
     var icosaMesh = new THREE.Mesh( icosa, material2 );
-		scene.add( icosa );
+		scene.add( icosaMesh );
 	}
 );
 
