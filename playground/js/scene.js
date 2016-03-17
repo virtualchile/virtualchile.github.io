@@ -5,7 +5,8 @@ var renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.setClearColor( 0x213055 );
 renderer.setPixelRatio( window.devicePixelRatio );
-document.body.appendChild( renderer.domElement );
+canvas_intro = document.getElementById('canvas-intro');
+canvas_intro.appendChild( renderer.domElement );
 
 camera.position.z = 500;
 
@@ -18,32 +19,83 @@ camera.position.z = 500;
 // directionalLight2.position.set( 0, -10, 0 );
 // scene.add( directionalLight2 );
 
-var torusGeometry = new THREE.TorusGeometry( 100, 20, 32, 64 );
+var torusGeometry = new THREE.TorusGeometry( 300, 100, 32, 64 );
 material = new THREE.MeshNormalMaterial();
 var torus1 = new THREE.Mesh( torusGeometry, material );
 scene.add( torus1 );
+torus1.position.x= 600;
+torus1.position.z= -100;
 
-var cubeGeometry = new THREE.IcosahedronGeometry( 100, 0);
+var geometry = new THREE.CylinderGeometry( 50, 50, 200, 32 );
+var cylinder = new THREE.Mesh( geometry, material );
+scene.add( cylinder );
+
+cylinder.position.x= -400;
+cylinder.position.y= -400;
+cylinder.position.z= -100;
+cylinder.rotation.y= -100;
+
+
+var cubeGeometry = new THREE.BoxGeometry( 100, 100, 100);
 var cube1 = new THREE.Mesh( cubeGeometry, material );
 scene.add( cube1 );
 
-cube1.position.y= 200;
+cube1.position.set(-600,0,-400);
+
+var icosaObj;
+var octahedronObj;
+var fluidObj;
+
+var manager = new THREE.LoadingManager();
+				manager.onProgress = function ( item, loaded, total ) {
+
+					console.log( item, loaded, total );
+
+				};
 
 
-// instantiate a loader
-var loader = new THREE.OBJLoader();
+// Model1
+				var loader = new THREE.OBJLoader( manager );
+				loader.load( 'js/object_icosahedron.obj', function ( icosa) {
+					icosa.traverse( function ( child ) {
+						if ( child instanceof THREE.Mesh ) {
+							child.material = material;
+						}
+					} );
+          icosaObj = icosa;
+					scene.add(icosa);
+          icosa.position.y= 200;
+				} );
 
-// load a resource
-loader.load(
-	// resource URL
-	'js/icosa.obj',
-	// Function when resource is loaded
-	function ( icosa ) {
-    material2 = new THREE.MeshNormalMaterial();
-    var icosaMesh = new THREE.Mesh( icosa, material2 );
-		scene.add( icosaMesh );
-	}
-);
+// Model2
+  				var loader2 = new THREE.OBJLoader( manager );
+  				loader2.load( 'js/object_octahedron.obj', function (octahedron) {
+  					octahedron.traverse( function ( child2 ) {
+  						if ( child2 instanceof THREE.Mesh ) {
+  							child2.material = material;
+  						}
+  					} );
+            octahedronObj = octahedron;
+  					scene.add(octahedron);
+            octahedron.position.set(-400, 400, -1500);
+
+  				} );
+
+// Model2
+  				var loader3 = new THREE.OBJLoader( manager );
+  				loader2.load( 'js/object_fluid.obj', function (fluid) {
+  					fluid.traverse( function ( child3 ) {
+  						if ( child3 instanceof THREE.Mesh ) {
+  							child3.material = material;
+  						}
+  					} );
+            fluidObj = fluid;
+  					scene.add(fluid);
+            fluid.position.set(-700, 400, 0);
+            fluid.scale.set(1.2, 1.2, 1.2);
+
+  				} );
+
 
 
 
@@ -85,10 +137,18 @@ var render = function () {
 
   requestAnimationFrame( render );
 
-  torus1.rotation.x += 0.01;
-  torus1.rotation.y += 0.01;
   cube1.rotation.x += 0.01;
-  cube1.rotation.y += 0.01;
+  cube1.rotation.y -= 0.01;
+  torus1.rotation.x += 0.01;
+  torus1.rotation.y -= 0.01;
+  icosaObj.rotation.x += 0.01;
+  icosaObj.rotation.y += 0.01;
+  octahedronObj.rotation.x += 0.01;
+  octahedronObj.rotation.y += 0.01;
+  fluidObj.rotation.x += 0.01;
+  fluidObj.rotation.y += 0.01;
+  cylinder.rotation.x += 0.01;
+  cylinder.rotation.y += 0.01;
 
   renderer.render(scene, camera);
 };
