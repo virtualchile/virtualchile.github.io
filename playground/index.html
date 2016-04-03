@@ -1,28 +1,437 @@
 <!DOCTYPE html>
-<html>
-	<head>
-    <meta charset="utf-8">
-		<title>Virtual Chile -  El primer evento VR/AR hecho en Chile</title>
-    <link rel="stylesheet" href="css/fonts/stylesheet.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="css/styles.css" media="screen" charset="utf-8">
-    <script src="js/three.min.js"></script>
-    <script src="js/OBJLoader.js"></script>
-	</head>
-	<body>
-    <div class="container">
-      <section id="canvas-intro" class="section-intro">
-        <div class="content">
-          <div class="content-container">
-            <h1>Primer evento de VR/AR en Chile</h1>
-            <p class="event-excerpt">
-              Un encuentro dedicado a explorar las tecnologías emergentes de hoy y del mañana
-            </p>
-          </div>
-        </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<title>Virtual Chile - Encuentro de VR/AR en Chile</title>
 
-      </section>
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+  <link rel="stylesheet" href="css/fonts/stylesheet.css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/min/script.min.js"></script>
+  <script src="js/min/three.min.js"></script>
+  <script src="js/min/OBJLoader.js"></script>
+
+  <!-- Typekit script -->
+  <!-- <script src="https://use.typekit.net/pta3dsc.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script> -->
+
+</head>
+
+<body>
+<nav class="site-navigation">
+  <div class="container">
+    <a class="main-logo" href="http://virtualchile.org">
+      <!-- <img src="assets/img/virtualchile-logo.png" alt="Virtual Chile" /> -->
+    </a>
+    <div class="menu-icon"></div>
+    <div class="navigation-container">
+      <ul class="navigation-items">
+        <!-- <li><a href="#">Science</a></li> -->
+        <li><a href="#">Acerca</a></li>
+        <li><a href="#">Oradores</a></li>
+        <li><a href="#">Agenda</a></li>
+        <li><a href="#">Mapa</a></li>
+      </ul>
+      <a href="#subscribe-form" class="navigation-cta">Registrarme</a>
+      <!-- <div class="social-icons">
+        <h3>Comparte</h3>
+        <a class="facebook-icon" href="https://facebook.com/virtualchile">
+          <span class="icon fa fa-facebook"></span>
+        </a>
+        <a class="twitter-icon" href="https://twitter.com/virtual_chile">
+          <span class="fa fa-twitter"></span>
+        </a>
+
+      </div> -->
     </div>
 
-    <script src="js/scene.js" charset="utf-8"></script>
-	</body>
+  </div>
+</nav>
+<header class="introduction-section" id="canvas-intro">
+  <div class="container-canvas">
+    <div class="title-container">
+      <h1 class="intro-title section-title">Primer encuentro de VR/AR en Chile</h1>
+      <p class="intro-subtitle section-description">Un encuentro dedicado a explorar el actual desarrollo de las tecnólogias de Realidad Virtual y Realidad Aumentada, su funcionamiento y sus beneficios. </p>
+    </div>
+    <a href="#subscribe-form" class="main-cta" href="#">Registrate ahora</a>
+
+    <!-- <div class="social-icons-intro">
+      <a class="facebook-icon" href="https://facebook.com/virtualchile">
+        <span class="icon fa fa-facebook"></span>
+      </a>
+      <a class="twitter-icon" href="https://twitter.com/virtual_chile">
+        <span class="fa fa-twitter"></span>
+      </a>
+    </div> -->
+
+  </div>
+
+
+    <!-- <img src="assets/img/pleiq-introduction-background.jpg" alt="PleIQ Game" /> -->
+</header>
+
+<section class="testimonial-banner">
+  <div class="container">
+    <div class="title-container">
+      <p class="section-description">
+        La fantasia de entrar a un mundo virtual o poder manipular datos con nuestras propias manos han sido capturadas por años por peliculas como The Matrix o Minority Report. La espera por este futuro por fin a llegado a un fin: El estado presente de las tecnologías de realidad virtual y aumentada han hecho esta fantasía una realidad.
+        <br>
+        <br>
+        En este evento discutimos el pasado, presente y futuro de estas tecnologías y sus aplicaciones actuales para la educación, el comercio y el trabajo. También le damos la oportunidad a desarrolladores de aprender a implementar aplicaciones de realidad aumentada basicas. Al final de esta conferencia atendientes tendrán una comprehension general de los aspectos técnicos e implicaciones sociales de esta tecnología.</p>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="main-features-section">
+  <div class="container">
+
+    <div class="main-feature feature-01">
+
+      <div class="content-right">
+        <div class="main-feature-image">
+          <img src="assets/img/main-feature-01_girl-holding-pleiq.jpg" alt="Play with PleIQ" />
+        </div>
+      </div>
+
+      <div class="content-left">
+        <h1 class="feature-title">Juega</h1>
+        <p class="main-feature-description">
+          PleIQ es un juguete físico que contiene 8 bloques y tambien es digital, a traves de un app movil. Cuando se usan en conjunto, le dan vida a 48 experiencias educativas de Realidad Aumentada. A diferencia de los bloques tradicionales, los de PleIQ son bastante livianos y seguros de usar y jugar.
+        </p>
+        <a href="#subscribe-form" class="learn-more-button" href="#">Conoce más</a>
+      </div>
+
+    </div>
+  <hr>
+    <div class="main-feature feature-02">
+      <div class="content-left">
+        <div class="main-feature-image">
+          <img src="assets/img/main-feature-02_multiple-intelligences-pleiq.png" alt="Learn with PleIQ - Multiple Intelligences" />
+        </div>
+      </div>
+
+      <div class="content-right">
+        <h1 class="feature-title">Aprende</h1>
+        <p class="main-feature-description">
+          PleIQ toma en cuenta los distintos estilos de aprendizaje, desarrollando las inteligencias multiples y mejorando sus habilidades tempranas. Cada cubo viene con retos educacionales para mejorar las inteligencias multiples.
+        </p>
+        <a href="#subscribe-form" class="learn-more-button" href="#">Conoce más</a>
+      </div>
+
+    </div>
+  <hr>
+    <div class="main-feature feature-03">
+
+      <div class="content-right">
+        <div class="main-feature-image">
+          <img src="assets/img/main-feature-03_explore-pleiq.jpg" alt="Explore with PleIQ" />
+        </div>
+      </div>
+
+      <div class="content-left">
+        <h1 class="feature-title">Explora</h1>
+        <p class="main-feature-description">
+          Cada experiencia de PleIQ es completamente interactiva dentro de un espacio tridimensional. Puedes explorar las experiencias desde cualquier ángulo y comprender el mundo solo con mover y rotar los cubos ó tocando los objetos de la experiencia. ¡Es como un videojuego en la vida real!
+        </p>
+        <a href="#subscribe-form" class="learn-more-button" href="#">Conoce más</a>
+      </div>
+
+    </div>
+  </div>
+
+</section> -->
+
+<!-- <section class="reinforcement-argument-section parent-children">
+  <div class="title-container">
+    <h1 class="section-title">Para padres inteligentes que quieren hijos más inteligentes</h1>
+    <p class="section-description">
+        PleIQ ayuda a los padres a comprender el progreso de sus hijos y mejorar sus habilidades.
+    </p>
+    <a href="#subscribe-form" class="secondary-cta" href="#">Únete al programa beta</a>
+  </div>
+
+</section> -->
+
+<!-- <section class="secondary-features-section">
+
+    <div class="title-container">
+      <h1 class="section-title">Evolutivo, Retador y Entretenido</h1>
+      <p class="section-description">
+        La aplicación entiende los estados emocionales y monitorea el desarrollo cognitivo mientras juegan, luego envia reportes del progreso a los padres y maetros.
+      </p>
+    </div>
+
+    <div class="container">
+        <div class="speaker-profile speaker-profile-01">
+          <span class="speaker-profile-icon fa fa-trophy"></span>
+          <h3 class="speaker-profile-title">Juegos y retos</h3>
+          <p class="speaker-profile-description">
+              Hemos diseñado un conjunto de divertidos retos educacionales que ayudan a mejorar las inteligencias multiples de los niños.
+          </p>
+        </div>
+        <div class="speaker-profile speaker-profile-02">
+          <span class="speaker-profile-icon fa fa-volume-up"></span>
+          <h3 class="speaker-profile-title">Sonido interno</h3>
+          <p class="speaker-profile-description">
+              El sonido es un sentido importante en el desarrollo de cada niño. Los bloques pueden generar sonido al moverlos ó agitarlos.
+          </p>
+        </div>
+        <div class="speaker-profile speaker-profile-03">
+          <span class="speaker-profile-icon fa fa-envelope"></span>
+          <h3 class="speaker-profile-title">Reportes de progreso</h3>
+          <p class="speaker-profile-description">
+              PleIQ monitorea el desarrollo del niño mientra juega y envia reportes frecuentes por correo con pistas acerca de las mejoras del niño.
+          </p>
+        </div>
+    </div>
+</section> -->
+
+<section class="secondary-features-section">
+
+    <div class="title-container">
+      <h1 class="section-title">Oradores</h1>
+      <p class="section-description">
+          Expertos en VR y AR, futuristas y visionarios del mundo tecnológico nos enseñaran las ultimas novedades del area asi como lo que nos depara el futuro.
+      </p>
+    </div>
+
+    <div class="container speakers-container">
+        <div class="speaker-profile speaker-profile-01">
+          <span class="speaker-profile-image">
+            <img src="assets/img/speaker_edison.jpg" alt="Edison Durán - PleIQ"/>
+          </span>
+          <h3 class="speaker-profile-title">Edison Durán</h3>
+          <div class="speaker-profile-job">
+              <span class="job-title">CEO en SINGULAR</span>
+              <span class="degree-title">Master's Degree in Theoretical Physics</span>
+              <span class="university-title">Universidad Central de Venezuela</span>
+          </div>
+          <p class="speaker-profile-description">
+              Edison es físico, con estudios en física teorética, astronomía, astrofísica, y administración civil. El es un emprendedor social y de tecnología. En el 2013 el fundó el start-up SINGULAR, compañía pionera del desarrollo de la tecnología de realidad aumentada (RA) en Venezuela a través de su trabajo con marcas reconocidas como Sanofi-Adventis, MercadoLibre, P&G, PepsiCo, etc. Su start-up  gano primer lugar en el Demo Day del programa Start-Up Chile recientemente.           </p>
+        </div>
+        <div class="speaker-profile speaker-profile-02">
+          <span class="speaker-profile-image">
+            <img src="assets/img/speaker_pedro.jpg" alt="Pedro Vargas - Madreading"/>
+          </span>
+          <h3 class="speaker-profile-title">Pedro Vargas</h3>
+          <div class="speaker-profile-job">
+              <span class="job-title">CCO en Mad Reading</span>
+              <span class="degree-title">Master of Engineering in VR and Innovation</span>
+              <span class="university-title">Paris Tech</span>
+          </div>
+          <p class="speaker-profile-description">
+            Co-founder y Chief Creative Officer de Mad Reading, startup que participa en el programa Start-Up Chile. Pedro ha trabajado para Ubisoft como Interactive Designer y ha estado envuelto el desarrollo de negocios para diferentes prototipos de juegos que se han lanzado en el mercado móvil. Además, es profesor de video juegos experimentales en la carrera de video juego de la Universidad Andrés Bello.          </p>
+          </p>
+        </div>
+        <div class="speaker-profile speaker-profile-03">
+          <span class="speaker-profile-image">
+            <img src="assets/img/speaker_margarita.jpg" alt="Margarita Calderón - Madreading"/>
+          </span>
+          <h3 class="speaker-profile-title">Margarita Calderón</h3>
+          <div class="speaker-profile-job">
+              <span class="job-title">CEO en Mad Reading</span>
+              <span class="degree-title">Ph.D. in Linguistics</span>
+              <span class="university-title">Lancaster University</span>
+          </div>
+          <p class="speaker-profile-description">
+            Co-founder y Chief Executive Officer. Actualmente Margarita es académica de la carrera de Pedagogía en Educación Básica de la Universidad de Chile e investigadora asociada del Centro de Investigación Avanzada en Educación. Sus principales temas de investigación se relacionan al desarrollo de la lectoescritura en el hogar y la escuela. Actualmente trabaja en la expansión de sus investigaciones académicas, creando aplicaciones que ayuden en el desarrollo de la lectura y escritura de los niños.        </div>
+    </div>
+    <div class="container speakers-container">
+        <div class="speaker-profile speaker-profile-01">
+          <span class="speaker-profile-image">
+            <img src="assets/img/speaker_manuel.jpg" alt="Manuel Saintotte - Ikitoi"/>
+          </span>
+          <h3 class="speaker-profile-title">Manuel Saintotte</h3>
+          <div class="speaker-profile-job">
+              <span class="job-title">Co-founder de Ikitoi</span>
+              <span class="degree-title">Diseño Industrial</span>
+              <span class="university-title">Universidad de Buenos Aires</span>
+          </div>
+          <p class="speaker-profile-description">
+              Manuel es diseñador industrial. Su enfoque holístico del diseño lo lleva a profundizar más en el método de pensamiento de diseño para un mejor entender de los problemas que los productos y servicios deben resolver. Luego de trabajar durante 7 años en su estudio de diseño industrial fundo Ikitoi, una empresa orientada al desarrollo y producción de juguetes con el objetivo de cambiar la relación de los niños con su entorno, convirtiéndolos en creadores de su mundo y ya no observadores pasivos. También es profesor en la Universidad de Buenos Aires, Buenos Aires Emprende y la Universidad Nacional de Tecnología (Argentina).          </p>
+        </div>
+        <div class="speaker-profile speaker-profile-02">
+          <span class="speaker-profile-image">
+            <img src="assets/img/speaker_andrew.jpg" alt="Andrew Moran - Arges"/>
+          </span>
+          <h3 class="speaker-profile-title">Andrew Moran</h3>
+          <div class="speaker-profile-job">
+              <span class="job-title">CTO en Arges</span>
+              <span class="degree-title">Master of Engg. / Human-Computer Interfaces</span>
+              <span class="university-title">MIT - Lincoln Laboratory</span>
+          </div>
+          <p class="speaker-profile-description">
+            Andrew es el CTO de Arges y es especialista en la visualización de datos utilizando las tecnologías de realidad aumentada y realidad virtual. Durante su tiempo en MIT Andrew enfocó sus estudios sobre las interfaces entre computadores y humanos, la ludificación y la computación gráfica. Su tésis de maestría trato sobre la visualización y manipulación de Tweets geolocalizados dentro de una simulación virtual del campus de MIT. Actualmente Andrew aplica estos conocimientos al desarrollo de la herramienta de visualización de datos creada por Arges, compañía miembro de la generación 14 del programa Start-Up Chile.
+          </p>
+        </div>
+        <div class="speaker-profile speaker-profile-03">
+          <span class="speaker-profile-image">
+            <img src="assets/img/speaker_daniel.jpg" alt="Daniel Bulhosa Solórzano - Arges"/>
+          </span>
+          <h3 class="speaker-profile-title">Daniel Bulhosa Solórzano</h3>
+          <div class="speaker-profile-job">
+              <span class="job-title">CEO en Arges</span>
+              <span class="degree-title">Dual Bachelor of Science, Physics and Maths</span>
+              <span class="university-title">MIT - Center for Theoretical Physics</span>
+          </div>
+          <p class="speaker-profile-description">
+            Daniel es el CEO de Arges, compañía miembro del programa Start-Up Chile la cual esta diseñando una herramienta de realidad aumentada para controladores de tránsito aéreo basada en investigación previa hecha por la NASA. Él estudió física y matemática teorética en MIT y trabajó en el MIT Center for Theoretical Physics investigando la formación de agujeros negros primordiales como parte del Density Perturbations Group co-liderado por el profesor Alan Guth.
+          </p>
+        </div>
+    </div>
+</section>
+
+<section class="map-section">
+  <div class="title-container">
+    <h1 class="section-title">Cómo llegar</h1>
+    <p class="section-description">
+      Llegar es muy sencillo. Solo debes hacer esto y esto, mas esto y esto.
+    </p>
+  </div>
+  <div id="gmap_canvas"></div>
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+    <script type='text/javascript'>
+        function init_map(){var myOptions = {zoom:18,center:new google.maps.LatLng(-33.4315604,-70.6385793),mapTypeId: google.maps.MapTypeId.ROADMAP};
+        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+        marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-33.4315604,-70.6385793)});
+        infowindow = new google.maps.InfoWindow({content:'<strong>Virtual Chile - Universidad Nacional Andres Bello</strong><br>Santiago, Chile<br>'});
+        google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}
+        google.maps.event.addDomListener(window, 'load', init_map);
+    </script>
+</section>
+
+  <!-- <section class="reinforcement-argument-section">
+    <div class="title-container">
+      <h1 class="section-title">Una poderosa herramienta para las aulas de clase</h1>
+      <p class="section-description">
+          ¿Eres un maestro ó profesor? ¿Te gustaria probar PleIQ en tu escuela?
+      </p>
+      <a href="#subscribe-form" class="secondary-cta" href="#">Únete al programa beta</a>
+    </div>
+    <video autoplay  poster="assets/img/pleiq-video-still.jpg" id="bgvid" loop>
+        <source src="assets/video/pleiq-video-background.webm" type="video/webm">
+        <source src="assets/video/pleiq-video-background.mp4" type="video/mp4">
+    </video>
+
+</section> -->
+<!-- <section class="testimonials-section">
+  <div class="title-container">
+    <blockquote class="testimonial-blockquote" cite="http://www.nextlab.org">
+        "Yo creo que el cerebro ha evolucionado por millones de años para ser responsivo a diferentes tipos de contenido en el mundo. Contenido linguístico, musical, espacial, numérico, etc"
+    </blockquote>
+    <span class="testimonial-citation">–Howard Gardner</span>
+  </div>
+</section> -->
+
+<section class="partners-section">
+  <div class="container">
+    <img class="partner-logo" src="assets/img/partner_madreading.png" alt="Madreading" />
+    <img class="partner-logo" src="assets/img/partner_arges.png" alt="Arges" />
+    <img class="partner-logo" src="assets/img/partner_pleiq.png" alt="PleIQ" />
+    <img class="partner-logo" src="assets/img/partner_ikitoi.png" alt="Ikitoi" />
+    <img class="partner-logo" src="assets/img/partner_rentmarket.png" alt="Rent Market" />
+  </div>
+</section>
+
+<!-- <section id="subscribe-form" class="final-argument-section">
+  <div class="container">
+    <div class="content-right">
+      <h1 class="section-title">Prepárate para una nueva generación</h1>
+      <p class="section-description">
+          Permite que tu hijo sea de los primeros en usar PleIQ y forma parte de la evolución en la educación inicial.
+      </p>
+
+      <div class="mc_embed_signup">
+      <form action="//pleiq.us12.list-manage.com/subscribe/post?u=38cb906774da9bcb407a68c18&amp;id=de74e36819" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+
+        <div class="mc-field-group">
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="tu@correo.com">
+        </div>
+
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_38cb906774da9bcb407a68c18_de74e36819" tabindex="-1" value="">
+        </div>
+        <input type="submit" value="Únete a la beta ya" name="subscribe" id="mc-embedded-subscribe" class="button main-cta">
+        <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+        </div>
+      </form>
+      </div>
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
+    </div>
+  </div>
+</section> -->
+
+
+<section class="final-argument-section">
+  <div class="title-container">
+    <h1 class="section-title">Explora el futuro ahora</h1>
+    <p class="section-description">
+      Registrate ya !Es gratis!
+    </p>
+    <a href="#subscribe-form" class="main-cta" href="#">Registrate ahora</a>
+  </div>
+</section>
+
+
+
+
+<div class="contact-us-container">
+  <div class="contact-us">
+    <h2>Contáctanos</h1>
+    <span class="close-btn fa" >&#xf00d;</span>
+    <form id="form1" name="form1" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://singularapp.wufoo.com.mx/forms/m1rubuk31mxscyg/#public">
+
+      <input placeholder="Nombre" id="Field18" name="Field18" type="text" class="field text fn email" value="" size="8" tabindex="1" />
+      <input placeholder="Apellido" id="Field19" name="Field19" type="text" class="field text ln email" value="" size="14" tabindex="2" />
+
+      <input placeholder="tu@correo.com" id="Field16" name="Field16" type="email" spellcheck="false" class="field text medium email" value="" maxlength="255" tabindex="3" />
+      <textarea id="Field15" name="Field15" class="field textarea small" spellcheck="true" rows="6" cols="50" onkeyup="validateRange(15, 'character');" placeholder="Una pregunta, una idea, una propuesta. Lo quieras decirnos, escríbelo aquí."></textarea>
+      <input class="btn btn-outline btn-highlight main-cta" id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Enviar"/>
+
+      <div class="hide-this-piece">
+        <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+        <input type="hidden" id="idstamp" name="idstamp" value="2CrjERs3CVXOOotYwL2htzKw7fWXxUUi1/QG+gPsSqk="/>
+      </div>
+    </form>
+  </div>
+  <div class="contact-us-shadow"></div>
+</div>
+
+
+<footer class="footer">
+  <div class="container">
+    <nav class="footer-navigation">
+      <ul>
+        <!-- <li><a href="#">Ciencia</a></li> -->
+        <li><a href="/es/nosotros">Oradores</a></li>
+        <li><a href="/es/info">Agenda</a></li>
+        <li><a href="http://pleiq.com/blog/es/">Mapa</a></li>
+        <li><a href="#" class="contact-button">Contáctanos</a></li>
+      </ul>
+    </nav>
+    <span class="copyright-info">Virtual Chile © 2016 | Reservados todos los derechos</span>
+    <div class="social-icons">
+      <a class="facebook-icon" href="https://facebook.com/virtualchile">
+        <span class="icon fa fa-facebook"></span>
+      </a>
+      <a class="twitter-icon" href="https://twitter.com/virtual_chile">
+        <span class="fa fa-twitter"></span>
+      </a>
+
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/scene.js"></script>
+</body>
 </html>

@@ -1,3 +1,4 @@
+
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 10000 );
 
@@ -6,7 +7,7 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.setClearColor( 0x213055 );
 renderer.setPixelRatio( window.devicePixelRatio );
 canvas_intro = document.getElementById('canvas-intro');
-canvas_intro.appendChild( renderer.domElement );
+canvas_intro.appendChild(renderer.domElement);
 
 camera.position.z = 500;
 
