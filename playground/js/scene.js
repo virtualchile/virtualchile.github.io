@@ -1,9 +1,34 @@
 
 var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 10000 );
-
+var rendererHeight = 700;
+var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/rendererHeight, 0.1, 10000 );
 var renderer = new THREE.WebGLRenderer({antialias:true});
-renderer.setSize( window.innerWidth, window.innerHeight );
+
+var mouseX = 0;
+var mouseY = 0;
+document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+window.addEventListener( 'resize', onWindowResize, false );
+var windowHalfX = window.innerWidth / 2;
+var windowHalfY = window.innerHeight / 2;
+
+function onWindowResize() {
+				camera.aspect = window.innerWidth / rendererHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, rendererHeight );
+
+}
+
+
+if (window.innerWidth <= 768) {
+	renderer.setSize( window.innerWidth, 500 );
+	camera.aspect = window.innerWidth / 500;
+} else {
+	renderer.setSize( window.innerWidth, rendererHeight);
+	camera.aspect = window.innerWidth / rendererHeight;
+}
+
+
+
 renderer.setClearColor( 0x213055 );
 renderer.setPixelRatio( window.devicePixelRatio );
 canvas_intro = document.getElementById('canvas-intro');
@@ -11,17 +36,10 @@ canvas_intro.appendChild(renderer.domElement);
 
 camera.position.z = 500;
 
-// //-- Top Light
-// var directionalLight = new THREE.DirectionalLight( 0x3b6adf, 0.5 );
-// directionalLight.position.set( 0, 10, 0 );
-// scene.add( directionalLight );
-// //-- Bottom Light
-// var directionalLight2 = new THREE.DirectionalLight( 0x00ffd2, 0.5 );
-// directionalLight2.position.set( 0, -10, 0 );
-// scene.add( directionalLight2 );
+
 
 var torusGeometry = new THREE.TorusGeometry( 300, 100, 32, 64 );
-material = new THREE.MeshNormalMaterial();
+var material = new THREE.MeshNormalMaterial();
 var torus1 = new THREE.Mesh( torusGeometry, material );
 scene.add( torus1 );
 torus1.position.x= 600;
@@ -97,23 +115,6 @@ var manager = new THREE.LoadingManager();
 
   				} );
 
-
-
-
-var mouseX = 0;
-var mouseY = 0;
-document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-window.addEventListener( 'resize', onWindowResize, false );
-var windowHalfX = window.innerWidth / 2;
-var windowHalfY = window.innerHeight / 2;
-
-function onWindowResize() {
-				SCREEN_WIDTH = window.innerWidth;
-				SCREEN_HEIGHT = window.innerHeight;
-				camera.aspect = SCREEN_WIDTH / SCREEN_HEIGHT;
-				camera.updateProjectionMatrix();
-				renderer.setSize( SCREEN_WIDTH, SCREEN_HEIGHT );
-			}
 
 function onDocumentMouseMove( event ) {
 				mouseX = ( event.clientX - windowHalfX );

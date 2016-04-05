@@ -22,12 +22,14 @@ body {
 
 canvas {
 	position: relative;
-  top: 0;
-  bottom: 0;
-	left: 0;
-	right: 0;
+  // top: 0;
+  // bottom: 0;
+	// left: 0;
+	// right: 0;
 	z-index: 1;
 	margin: 0;
+	display: block;
+	vertical-align: top;
 }
 
 p {
@@ -158,7 +160,7 @@ section, footer {
 
 .navigation-items {
 	display: block;
-	padding-top: 3rem;
+	padding-top: 4rem;
 	@media screen and (min-width: $break-large) {
 		float: right;
 		margin-right: .7rem;
@@ -338,8 +340,11 @@ section, footer {
 //------- Introduction Section
 
 .introduction-section .section-title {
-	font-size: 3.2rem;
+	font-size: 2rem;
 	margin-bottom: 0;
+	@media screen and (min-width: $break-large) {
+		font-size: 3.2rem;
+	}
 }
 
 .intro-subtitle {
@@ -362,7 +367,7 @@ section, footer {
 	padding-top: 6rem;
 	margin: 0 auto;
 	z-index: 4;
-	overflow: hidden;
+	// overflow: hidden;
 	@media screen and (min-width: $break-large) {
 		padding-top: 14rem;
 	}
@@ -547,12 +552,12 @@ hr {
 }
 
 .speaker-profile {
-	text-align: center;
+	// text-align: center;
 	font-weight: 400;
 	@media screen and (min-width: $break-small) {
-		width: 31%;
+		width: 48%;
 		float: left;
-		margin-right: 3.5%;
+		margin-right: 4%;
 	}
 }
 
@@ -580,14 +585,14 @@ hr {
 
 .speaker-profile-image {
 	display: block;
-	padding: 8px;
+	padding: 4px;
 	text-align: center;
 	color: $color_1;
-	border: 2px solid $color_6;
+	border: 1px solid $color_6;
 	border-radius: 128px;
-	width: 200px;
+	width: 100px;
 	overflow: hidden;
-	margin: 0 auto;
+	// margin: 0 auto;
 }
 
 .speaker-profile-image img {
@@ -598,9 +603,13 @@ hr {
 	overflow: hidden;
 }
 
+.speakers-container {
+	margin-bottom: 2rem;
+}
+
 .speakers-container:last-of-type {
 	@media screen and (min-width: $break-small) {
-		margin-top: 3rem;
+		margin-bottom: 0;
 	}
 }
 
@@ -704,7 +713,7 @@ hr {
 //-------------- Testimonials Section
 
 .testimonials-section {
-	background: $color_3;
+	background: $color_7;
 	color: white;
 	@media screen and (min-width: $break-large) {
 		padding: 9rem 0 10rem 0;
@@ -1087,10 +1096,111 @@ video {
 }
 
 
+
+/////////////-------------------------- Timeline section-description
+
+.timeline-section {
+	background: #F7F7F7;
+}
+
+.timeline-item-container {
+	clear: both;
+	overflow: hidden;
+	padding-bottom: 1rem;
+	position: relative;
+}
+
+.timeline-item {
+	border: 1px solid $black10;
+	width: 46%;
+	padding: 1rem 1.5rem;
+	border-radius: 4px;
+	margin-top: -2rem;
+	position: relative;
+	background: white;
+}
+
+.timeline-item::after {
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border-top: 1px solid #E6E6E6;
+	border-right: 1px solid #E6E6E6;
+	transform: rotate(45deg);
+	background: white;
+	top: 10px;
+	right: -7px;
+}
+
+.timeline-item-container:nth-of-type(odd) .timeline-item{
+	float: left;
+	text-align: right;
+}
+
+.timeline-item-container:nth-of-type(even) .timeline-item {
+	float: right;
+}
+
+.timeline-item-container:nth-child(even) .timeline-item::after {
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid #E6E6E6;
+	border-left: 1px solid #E6E6E6;
+	left: -7px;
+}
+
+.timeline-item-container:last-of-type .timeline-line {
+	display: none;
+}
+
+.timeline-point {
+	display: block;
+	width: 32px;
+	height: 32px;
+	background: white;
+	border: 4px solid $black30;
+	border-radius: 100%;
+	margin: 0 auto;
+}
+
+.timeline-line {
+	display: block;
+	width: 4px;
+	height: 100%;
+	margin: 0 auto;
+	background: $black10;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.timeline-item-title {
+	font-size: 1.7rem;
+	margin: 0;
+}
+
+.timeline-item-time {
+	margin: 0;
+	color: $color_6;
+}
+
+.timeline-item-speaker {
+	color: $color_3;
+	margin: 0;
+}
+
+.timeline-item-description {
+	font-size: 1rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.4rem;
+	font-weight: 400;
+}
+
 //---------------- Misc
 
 #gmap_canvas {
-  width: 80%;
+  width: 100%;
   height: 400px;
 	margin: 0 auto;
 	border-radius: 4px;
