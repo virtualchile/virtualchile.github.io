@@ -1,16 +1,501 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Virtual Chile</title>
-  </head>
-  <style media="screen">
-    body { font-family: sans-serif;}
-  </style>
-  <body>
-    <h3>¡Hola gente virtual! </h3>
-    <p>
-      Paciencia, algo fascinante encontrarás aquí muy pronto...
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<title>Virtual Chile - Encuentro de VR/AR en Chile</title>
+
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+  <link rel="stylesheet" href="css/fonts/stylesheet.css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/min/script-min.js"></script>
+  <script src="js/min/three.min.js"></script>
+  <script src="js/min/OBJLoader.js"></script>
+
+  <!-- Typekit script -->
+  <!-- <script src="https://use.typekit.net/pta3dsc.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script> -->
+
+</head>
+
+<body>
+<nav class="site-navigation">
+  <div class="container">
+    <a class="main-logo" href="http://virtualchile.org">
+      <!-- <img src="assets/img/virtualchile-logo.png" alt="Virtual Chile" /> -->
+    </a>
+    <div class="menu-icon"></div>
+    <div class="navigation-container">
+      <ul class="navigation-items">
+        <!-- <li><a href="#">Science</a></li> -->
+        <li><a href="#acerca">Acerca</a></li>
+        <li><a href="#oradores">Oradores</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#mapa">Mapa</a></li>
+        <li><a href="#" class="contact-button">Contacto</a></li>
+      </ul>
+      <a href="https://www.eventbrite.com/e/virtual-chile-tickets-23203986749?utm-medium=discovery&utm-campaign=social&utm-content=attendeeshare&utm-source=cp&utm-term=listing" class="navigation-cta">Registrarme</a>
+      <!-- <div class="social-icons">
+        <h3>Comparte</h3>
+        <a class="facebook-icon" href="https://facebook.com/virtualchile">
+          <span class="icon fa fa-facebook"></span>
+        </a>
+        <a class="twitter-icon" href="https://twitter.com/virtual_chile">
+          <span class="fa fa-twitter"></span>
+        </a>
+
+      </div> -->
+    </div>
+
+  </div>
+</nav>
+<header class="introduction-section" id="canvas-intro">
+  <div class="container-canvas">
+    <div class="title-container">
+      <h1 class="intro-title section-title">29 de Abril<br>Primer encuentro de VR/AR en Chile</h1>
+      <p class="intro-subtitle section-description">Un evento dedicado a explorar el actual desarrollo de las tecnologías de Realidad Virtual y Realidad Aumentada, su funcionamiento y su impacto social. </p>
+    </div>
+    <a href="https://www.eventbrite.com/e/virtual-chile-tickets-23203986749?utm-medium=discovery&utm-campaign=social&utm-content=attendeeshare&utm-source=cp&utm-term=listing" class="main-cta">Registrarme ahora</a>
+
+    <!-- <div class="social-icons-intro">
+      <a class="facebook-icon" href="https://facebook.com/virtualchile">
+        <span class="icon fa fa-facebook"></span>
+      </a>
+      <a class="twitter-icon" href="https://twitter.com/virtual_chile">
+        <span class="fa fa-twitter"></span>
+      </a>
+    </div> -->
+
+  </div>
+</header>
+
+<section class="testimonial-banner" id="acerca">
+  <div class="title-container">
+    <h1 class="section-title">La fantasía hecha realidad</h1>
+    <p class="section-description">
+      La fantasía de entrar a un mundo virtual o poder manipular datos con nuestras propias manos ha sido plasmada por años en peliculas como The Matrix o Minority Report. La espera por este futuro finalmente ha llegado:<br>El estado presente de las tecnologías de Realidad Virtual y Aumentada han hecho esta fantasía una realidad.
+      <br>
+      <br>
+      Este <span class="date-highlight">29 de Abril</span> discutiremos el pasado, presente y futuro de estas tecnologías y sus aplicaciones actuales para la educación, el comercio y el trabajo. También le damos la oportunidad a desarrolladores o entusiastas del área para aprender a implementar aplicaciones de Realidad Aumentada básicas. Al final de este evento los participantes tendrán una comprensión general de los aspectos técnicos e implicaciones sociales de esta tecnología.
     </p>
-  </body>
+  </div>
+</section>
+
+<section class="secondary-features-section">
+
+    <div class="title-container">
+      <h1 class="section-title">Aprende, Explora y Diviértete</h1>
+      <p class="section-description">
+        Ya sea que eres un experto en tecnología, amante de los videojuegos o solo tienes curiosidad, te invitamos a participar. Virtual Chile es un evento gratuito pensado para todo público.
+      </p>
+    </div>
+
+    <div class="container">
+        <div class="secondary-feature">
+          <span class="secondary-feature-icon fa fa-comment"></span>
+          <h3 class="secondary-feature-title">Conferencias</h3>
+          <p class="secondary-feature-description">
+              Expertos en el área hablaran respecto al estado de desarrollo actual del VR/AR y sus implicaciones educativas, económicas y sociales.
+          </p>
+        </div>
+        <div class="secondary-feature">
+          <span class="secondary-feature-icon fa fa-simplybuilt"></span>
+          <h3 class="secondary-feature-title">Demostraciones</h3>
+          <p class="secondary-feature-description">
+            Multiples demos en vivo con dispositivos de última generación para el VR/AR, incluyendo el HTC Vive, Oculus Rift y Samsung Gear.
+          </p>
+        </div>
+        <div class="secondary-feature">
+          <span class="secondary-feature-icon fa fa-wrench"></span>
+          <h3 class="secondary-feature-title">Workshop</h3>
+          <p class="secondary-feature-description">
+              Taller de nivel intermedio para aprender a desarrollar tu propia aplicación de Realidad Aumentada. <b>Los cupos son limitados</b>.
+          </p>
+        </div>
+    </div>
+</section>
+
+<section class="secondary-features-section" id="oradores">
+
+    <div class="title-container">
+      <h1 class="section-title">Oradores</h1>
+      <p class="section-description">
+          Expertos en VR/AR, futuristas y emprendedores del mundo tecnológico nos enseñaran las últimas novedades del área asi como lo que nos depara el futuro.
+      </p>
+    </div>
+
+    <div class="container speakers-container">
+        <div class="speaker-profile speaker-profile-01">
+          <span class="speaker-profile-image">
+            <img src="assets/img/speaker_edison.jpg" alt="Edison Durán - PleIQ"/>
+          </span>
+          <h3 class="speaker-profile-title">Edison Durán</h3>
+          <div class="speaker-profile-job">
+              <span class="job-title">CEO en Singular</span>
+              <span class="degree-title">Master's Degree in Theoretical Physics</span>
+              <span class="university-title">Universidad Central de Venezuela</span>
+          </div>
+          <p class="speaker-profile-description">
+              Físico, con estudios en Física Teórica, Astronomía, Astrofísica, y Gerencia de Ciudades. El es un emprendedor social y de tecnología. En el 2013 el fundó el start-up Singular, compañía pionera del desarrollo de la tecnología de Realidad Aumentada (RA) en Venezuela a través de su trabajo con marcas reconocidas como Sanofi-Adventis, MercadoLibre, P&G, PepsiCo, etc. Su start-up ganó primer lugar en el Demo Day del programa Start-Up Chile recientemente.           </p>
+        </div>
+        <div class="speaker-profile speaker-profile-02">
+          <span class="speaker-profile-image">
+            <img src="assets/img/speaker_pedro.jpg" alt="Pedro Vargas - Madreading"/>
+          </span>
+          <h3 class="speaker-profile-title">Pedro Vargas</h3>
+          <div class="speaker-profile-job">
+              <span class="job-title">CCO en Mad Reading</span>
+              <span class="degree-title">Master of Engineering in VR and Innovation</span>
+              <span class="university-title">Paris Tech</span>
+          </div>
+          <p class="speaker-profile-description">
+            Co-founder y Chief Creative Officer de Mad Reading, startup que participa en el programa Start-Up Chile. Pedro ha trabajado para Ubisoft como Interactive Designer y ha estado envuelto el desarrollo de negocios para diferentes prototipos de juegos que se han lanzado en el mercado móvil. Además, es profesor de video juegos experimentales en la carrera de video juego de la Universidad Andrés Bello.          </p>
+          </p>
+        </div>
+
+    </div>
+
+    <div class="container speakers-container">
+
+      <div class="speaker-profile speaker-profile-03">
+        <span class="speaker-profile-image">
+          <img src="assets/img/speaker_margarita.jpg" alt="Margarita Calderón - Madreading"/>
+        </span>
+        <h3 class="speaker-profile-title">Margarita Calderón</h3>
+        <div class="speaker-profile-job">
+            <span class="job-title">CEO en Mad Reading</span>
+            <span class="degree-title">Ph.D. in Linguistics</span>
+            <span class="university-title">Lancaster University</span>
+        </div>
+        <p class="speaker-profile-description">
+          Actualmente Margarita es Pedagoga en Educación Básica de la Universidad de Chile e investigadora asociada del Centro de Investigación Avanzada en Educación. Sus principales temas de investigación se relacionan al desarrollo de la lectoescritura en el hogar y la escuela. Actualmente trabaja en la expansión de sus investigaciones académicas, creando aplicaciones que ayuden en el desarrollo de la lectura y escritura de los niños.
+        </div>
+
+        <div class="speaker-profile speaker-profile-01">
+          <span class="speaker-profile-image">
+            <img src="assets/img/speaker_manuel.jpg" alt="Manuel Saintotte - Ikitoi"/>
+          </span>
+          <h3 class="speaker-profile-title">Manuel Saintotte</h3>
+          <div class="speaker-profile-job">
+              <span class="job-title">Co-founder de Ikitoi</span>
+              <span class="degree-title">Diseño Industrial</span>
+              <span class="university-title">Universidad de Buenos Aires</span>
+          </div>
+          <p class="speaker-profile-description">
+              Luego de trabajar durante 7 años en su estudio de diseño industrial fundo Ikitoi, una empresa orientada al desarrollo y producción de juguetes con el objetivo de cambiar la relación de los niños con su entorno, convirtiéndolos en creadores de su mundo y ya no observadores pasivos. También es profesor en la Universidad de Buenos Aires, Buenos Aires Emprende y la Universidad Nacional de Tecnología (Argentina).          </p>
+        </div>
+
+    </div>
+
+
+    <div class="container speakers-container">
+
+        <div class="speaker-profile speaker-profile-02">
+          <span class="speaker-profile-image">
+            <img src="assets/img/speaker_andrew.jpg" alt="Andrew Moran - Arges"/>
+          </span>
+          <h3 class="speaker-profile-title">Andrew Moran</h3>
+          <div class="speaker-profile-job">
+              <span class="job-title">CTO en Arges</span>
+              <span class="degree-title">Master of Engg. / Human-Computer Interfaces</span>
+              <span class="university-title">MIT - Lincoln Laboratory</span>
+          </div>
+          <p class="speaker-profile-description">
+            Especialista en la visualización de datos utilizando las tecnologías de realidad aumentada y realidad virtual. Durante su tiempo en MIT Andrew enfocó sus estudios sobre las interfaces entre computadores y humanos, la ludificación y la computación gráfica. Su tésis de maestría trato sobre la visualización y manipulación de Tweets geolocalizados dentro de una simulación virtual del campus de MIT. Lidera el equipo de desarrollado y visualización de datos en Arges, compañía miembro de Start-Up Chile.
+          </p>
+        </div>
+        <div class="speaker-profile speaker-profile-03">
+          <span class="speaker-profile-image">
+            <img src="assets/img/speaker_daniel.jpg" alt="Daniel Bulhosa Solórzano - Arges"/>
+          </span>
+          <h3 class="speaker-profile-title">Daniel Bulhosa Solórzano</h3>
+          <div class="speaker-profile-job">
+              <span class="job-title">CEO en Arges</span>
+              <span class="degree-title">Dual Bachelor of Science, Physics and Maths</span>
+              <span class="university-title">MIT - Center for Theoretical Physics</span>
+          </div>
+          <p class="speaker-profile-description">
+            Daniel es el CEO de Arges, compañía miembro del programa Start-Up Chile la cual esta diseñando una herramienta de realidad aumentada para controladores de tránsito aéreo basada en investigación previa hecha por la NASA. Él estudió física y matemática teorética en MIT y trabajó en el MIT Center for Theoretical Physics investigando la formación de agujeros negros primordiales como parte del Density Perturbations Group co-liderado por el profesor Alan Guth.
+          </p>
+        </div>
+    </div>
+</section>
+
+
+<section class="secondary-features-section timeline-section" id="agenda">
+  <div class="title-container">
+    <h1 class="section-title">Agenda</h1>
+    <p class="section-description">
+        Expertos en VR y AR, futuristas, emprendedores y visionarios del mundo tecnológico nos enseñaran los últimas avances del área así como lo que nos depara el futuro.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="timeline-item-container">
+        <span class="timeline-point"></span>
+        <span class="timeline-line"></span>
+        <div class="timeline-item">
+          <h2 class="timeline-item-title">Registro y bienvenida</h2>
+          <h3 class="timeline-item-time">09:30 - 09:55</h3>
+          <p class="timeline-item-description">
+            Introducción al evento.
+          </p>
+        </div>
+    </div>
+
+    <div class="timeline-item-container">
+        <span class="timeline-point"></span>
+        <span class="timeline-line"></span>
+        <div class="timeline-item">
+          <h2 class="timeline-item-title">La Realidad Virtual y Aumentada Actualmente</h2>
+          <h3 class="timeline-item-time">10:00 - 10:30</h3>
+          <h4 class="timeline-item-speaker">Daniel Solórzano</h4>
+          <p class="timeline-item-description">
+            ¿Qué son las tecnologías de Realidad Virtual y Aumentada? ¿Cuáles son sus fundaciones técnicas y como ha sido implementada? En esta charla discutimos los fundamentos y el estado actual de estas tecnologías, las cuales definirán la próxima década.
+          </p>
+        </div>
+    </div>
+
+    <div class="timeline-item-container">
+        <span class="timeline-point"></span>
+        <span class="timeline-line"></span>
+        <div class="timeline-item">
+          <h2 class="timeline-item-title">El futuro de la Realidad Aumentada y Realidad Virtual</h2>
+          <h3 class="timeline-item-time">10:35 - 11:05</h3>
+          <h4 class="timeline-item-speaker">Manuel Saintotte</h4>
+          <p class="timeline-item-description">
+            Hablaremos del impacto a mediano y largo plazo de la RA y RV. ¿Qué punto de contacto hay entre lo que nos contaron las novelas de ciencia ficción y  las primeras implementaciones reales de RA y RV, los posibles cambios en nuestra vida cotidiana una vez que estas tecnologías se establezcan y cuáles serán las oportunidades de negocios que se abren en el futuro?
+          </p>
+        </div>
+    </div>
+
+    <div class="timeline-item-container">
+        <span class="timeline-point"></span>
+        <span class="timeline-line"></span>
+        <div class="timeline-item">
+          <h2 class="timeline-item-title">Panel de discusion</h2>
+          <h3 class="timeline-item-time">11:10 - 12:00</h3>
+          <h4 class="timeline-item-speaker">Manuel Saintotte</h4>
+          <p class="timeline-item-description">
+            Hablaremos del impacto a mediano y largo plazo de la RA y RV. ¿Qué punto de contacto hay entre lo que nos contaron las novelas de ciencia ficción y  las primeras implementaciones reales de RA y RV, los posibles cambios en nuestra vida cotidiana una vez que estas tecnologías se establezcan y cuáles serán las oportunidades de negocios que se abren en el futuro?
+          </p>
+        </div>
+    </div>
+
+    <div class="timeline-item-container">
+        <span class="timeline-point"></span>
+        <span class="timeline-line"></span>
+        <div class="timeline-item">
+          <h2 class="timeline-item-title">Lunch break</h2>
+          <h3 class="timeline-item-time">12:00 - 01:00</h3>
+          <p class="timeline-item-description">
+            ¡Networking, selfies y diversión!
+          </p>
+        </div>
+    </div>
+
+    <div class="timeline-item-container">
+        <span class="timeline-point"></span>
+        <span class="timeline-line"></span>
+        <div class="timeline-item">
+          <h2 class="timeline-item-title">Publicidad con Realidad Aumentada</h2>
+          <h3 class="timeline-item-time">01:00 - 01:30 (I)</h3>
+          <h4 class="timeline-item-speaker">Edison Durán</h4>
+          <p class="timeline-item-description">
+            La realidad aumentada es una poderosa herramienta para la publicidad interactiva, transformando anuncios tradicionales y hasta objetos cotidianos a experiencias de multimedia interactivas que captan audiencias e incrementan el reconocimiento de marcas. <br>En esta charla vamos a examinar la vanguardia de este campo, algunos estudios de caso y el futuro de la publicidad a través de Realidad Aumentada.
+          </p>
+        </div>
+    </div>
+
+    <div class="timeline-item-container">
+        <span class="timeline-point"></span>
+        <span class="timeline-line"></span>
+        <div class="timeline-item">
+          <h2 class="timeline-item-title">Realidad Virtual para la educación</h2>
+          <h3 class="timeline-item-time">01:00 - 01:30 (I)</h3>
+          <h4 class="timeline-item-speaker">Pedro Vargas y Margarita Calderón</h4>
+          <p class="timeline-item-description">
+            Esta ponencia explora las aplicaciones de la realidad virtual y su relación con el aprendizaje. En específico, se retoma el concepto de aprendizaje situado y comunidades de practica (Lave & Wenger, 1991) para analizar el uso de la realidad virtual en el aula. Se presentan diversas experiencias educativas que utilizan la realidad virtual para crear ambientes de aprendizaje (Fowler, 2015).
+          </p>
+        </div>
+    </div>
+
+    <div class="timeline-item-container">
+        <span class="timeline-point"></span>
+        <span class="timeline-line"></span>
+        <div class="timeline-item">
+          <h2 class="timeline-item-title">La Realidad Aumentada para el mejoramiento del desempeño humano</h2>
+          <h3 class="timeline-item-time">01:00 - 01:30 (I)</h3>
+          <h4 class="timeline-item-speaker">Daniel Solórzano</h4>
+          <p class="timeline-item-description">
+            La realidad aumentada es una novedosa herramienta con increíble potencial para mejorar el desempeño humanos en diferentes contextos. En esta charla exploramos las aplicaciones actuales y futuras de esta tecnología en diferentes ámbitos profesionales.
+          </p>
+        </div>
+    </div>
+
+    <div class="timeline-item-container">
+        <span class="timeline-point"></span>
+        <span class="timeline-line"></span>
+        <div class="timeline-item">
+          <h2 class="timeline-item-title">Demostraciones en vivo</h2>
+          <h3 class="timeline-item-time">01:35 - 03:00</h3>
+          <p class="timeline-item-description">
+            Experimenta en vivo el mundo de la Realidad Virtual y Aumentada. Demostraciones con HTC Vive, Samsung Gear, Oculus Rift, Google Cardboard, entre otros.
+          </p>
+        </div>
+    </div>
+
+    <div class="timeline-item-container">
+        <span class="timeline-point"></span>
+        <span class="timeline-line"></span>
+        <div class="timeline-item">
+          <h2 class="timeline-item-title">AR/VR Workshop</h2>
+          <h4 class="timeline-item-speaker">Andrew Moran</h4>
+          <h3 class="timeline-item-time">03:05 - 05:00</h3>
+          <p class="timeline-item-description">
+            El workshop tratará sobre las fundaciones básicas para la creación de una aplicación móvil de realidad aumentada: Unity y Vuforia. Una aplicación básica de realidad aumentada para Android será creada por los participantes.           </p>
+        </div>
+    </div>
+
+    <div class="timeline-item-container">
+        <span class="timeline-point"></span>
+        <span class="timeline-line"></span>
+        <div class="timeline-item">
+          <h2 class="timeline-item-title">Despedida y Premiaciones</h2>
+          <h3 class="timeline-item-time">05:10</h3>
+          <p class="timeline-item-description">
+            Se realizará una rifa y los ganadores se llevan premios.
+          </p>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="map-section" id="mapa">
+  <div class="title-container">
+    <h1 class="section-title">Cómo llegar</h1>
+    <p class="section-description">
+      La sede del evento será el Campus Creativo de la Universidad Nacional Andres Bello (UNAB).
+    </p>
+  </div>
+  <div class="container">
+    <div class="map-hover"><span class="map-lock-icon fa fa-lock"></span></div>
+    <div id="gmap_canvas"></div>
+
+  </div>
+
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+    <script type='text/javascript'>
+        function init_map(){var myOptions = {zoom:18,center:new google.maps.LatLng(-33.4315604,-70.6385793),mapTypeId: google.maps.MapTypeId.ROADMAP};
+        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+        marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-33.4315604,-70.6385793)});
+        infowindow = new google.maps.InfoWindow({content:'<strong>Virtual Chile - Universidad Nacional Andres Bello</strong><br>Santiago, Chile<br>'});
+        google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}
+        google.maps.event.addDomListener(window, 'load', init_map);
+    </script>
+</section>
+
+
+
+<section class="testimonials-section">
+  <div class="title-container">
+    <blockquote class="testimonial-blockquote" cite="http://www.nextlab.org">
+"Creemos que algún día este tipo de experiencia inmersiva con Realidad Aumentada se convertirá en parte de la vida diaria en millones de personas."</blockquote>
+    <span class="testimonial-citation">–Mark Zuckerberg</span>
+  </div>
+</section>
+
+<section class="partners-section">
+  <div class="container">
+    <img class="partner-logo" src="assets/img/partner_madreading.png" alt="Madreading" />
+    <img class="partner-logo" src="assets/img/partner_arges.png" alt="Arges" />
+    <img class="partner-logo" src="assets/img/partner_pleiq.png" alt="PleIQ" />
+    <img class="partner-logo" src="assets/img/partner_ikitoi.png" alt="Ikitoi" />
+    <img class="partner-logo" src="assets/img/partner_rentmarket.png" alt="Rent Market" />
+  </div>
+  <div class="container">
+    <img class="partner-logo" src="assets/img/partner_none.png" alt="None" />
+    <img class="partner-logo" src="assets/img/partner_unab.png" alt="Universidad Andres Bello (UNAB)" />
+    <!-- <img class="partner-logo" src="assets/img/partner_corfo.png" alt="Corfo" /> -->
+    <img class="partner-logo" src="assets/img/partner_startupchile.png" alt="Startup Chile" />
+    <img class="partner-logo" src="assets/img/partner_openfuture.png" alt="Open Future"/>
+    <img class="partner-logo" src="assets/img/partner_none.png" alt="None" />
+  </div>
+</section>
+
+
+
+
+<section id="subscribe-form" class="final-argument-section">
+  <div class="title-container">
+    <h1 class="section-title">Explora el futuro este 29 de Abril</h1>
+    <p class="section-description">
+      Registrate en el evento ahora ¡Es gratis!
+    </p>
+    <a class="main-cta" href="https://www.eventbrite.com/e/virtual-chile-tickets-23203986749?utm-medium=discovery&utm-campaign=social&utm-content=attendeeshare&utm-source=cp&utm-term=listing">Registrarme ahora</a>
+    <p class="warning">Los cupos para el Workshop son limitados.</p>
+  </div>
+</section>
+
+
+
+
+<div class="contact-us-container">
+  <div class="contact-us">
+    <h2>Contáctanos</h1>
+    <span class="close-btn fa" >&#xf00d;</span>
+    <form id="form1" name="form1" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://singularapp.wufoo.com.mx/forms/q1k6aobo00qzn2m/#public">
+
+      <input placeholder="Nombre" id="Field18" name="Field18" type="text" class="field text fn email" value="" size="8" tabindex="1" />
+      <input placeholder="Apellido" id="Field19" name="Field19" type="text" class="field text ln email" value="" size="14" tabindex="2" />
+
+      <input placeholder="tu@correo.com" id="Field16" name="Field16" type="email" spellcheck="false" class="field text medium email" value="" maxlength="255" tabindex="3" />
+      <textarea id="Field15" name="Field15" class="field textarea small" spellcheck="true" rows="6" cols="50" onkeyup="validateRange(15, 'character');" placeholder="Una pregunta, una idea, una propuesta. Lo quieras decirnos, escríbelo aquí."></textarea>
+      <input class="btn btn-outline btn-highlight main-cta" id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Enviar"/>
+
+      <div class="hide-this-piece">
+        <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+        <input type="hidden" id="idstamp" name="idstamp" value="0TT4ZdUmhAMtmkaYe9zvnVYfyXU1p1C/1Rd6ux0XtQE="/>
+      </div>
+    </form>
+  </div>
+  <div class="contact-us-shadow"></div>
+</div>
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <nav class="footer-navigation">
+      <ul>
+        <!-- <li><a href="#">Ciencia</a></li> -->
+        <li><a href="/es/nosotros">Oradores</a></li>
+        <li><a href="/es/info">Agenda</a></li>
+        <li><a href="http://pleiq.com/blog/es/">Mapa</a></li>
+        <li><a href="#" class="contact-button">Contáctanos</a></li>
+      </ul>
+    </nav>
+    <span class="copyright-info">Virtual Chile © 2016 | Reservados todos los derechos</span>
+    <div class="social-icons">
+      <a class="facebook-icon" href="https://facebook.com/virtualchile">
+        <span class="icon fa fa-facebook"></span>
+      </a>
+      <a class="twitter-icon" href="https://twitter.com/virtual_chile">
+        <span class="fa fa-twitter"></span>
+      </a>
+
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/min/scene-min.js"></script>
+</body>
 </html>
