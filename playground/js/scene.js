@@ -20,8 +20,8 @@ function onWindowResize() {
 
 
 if (window.innerWidth <= 770) {
-	renderer.setSize( window.innerWidth, 440);
-	camera.aspect = window.innerWidth / 440;
+	renderer.setSize( window.innerWidth, 500);
+	camera.aspect = window.innerWidth / 500;
 } else {
 	renderer.setSize( window.innerWidth, rendererHeight);
 	camera.aspect = window.innerWidth / rendererHeight;
