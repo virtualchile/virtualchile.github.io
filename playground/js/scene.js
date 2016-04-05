@@ -19,7 +19,7 @@ function onWindowResize() {
 }
 
 
-if (window.innerWidth <= 768) {
+if (window.innerWidth <= 770) {
 	renderer.setSize( window.innerWidth, 500 );
 	camera.aspect = window.innerWidth / 500;
 } else {

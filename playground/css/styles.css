@@ -95,6 +95,10 @@ section, footer {
   padding: 0 2rem;
   margin: 0 auto;
   position: relative; }
+  @media screen and (min-width: 720px) {
+    .title-container {
+      padding: 0;
+      max-width: 80%; } }
   @media screen and (min-width: 1160px) {
     .title-container {
       padding: 0;
@@ -290,7 +294,7 @@ section, footer {
   margin-bottom: 2rem;
   display: block;
   color: white; }
-  @media screen and (min-width: 1160px) {
+  @media screen and (min-width: 720px) {
     .intro-subtitle {
       font-size: 1.4rem; } }
 
@@ -305,7 +309,7 @@ section, footer {
   z-index: 4; }
   @media screen and (min-width: 1160px) {
     .container-canvas {
-      padding-top: 14rem; } }
+      padding-top: 10rem; } }
 
 .introduction-section {
   min-height: 100px;

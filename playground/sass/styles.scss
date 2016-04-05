@@ -114,6 +114,12 @@ section, footer {
 	margin: 0 auto;
 	position: relative;
 
+	@media screen and (min-width: $break-small) {
+		padding: 0;
+		max-width: 80%;
+
+	}
+
 	@media screen and (min-width: $break-large) {
 		padding: 0;
 		max-width: 62%;
@@ -353,9 +359,13 @@ section, footer {
 	margin-bottom: 2rem;
 	display: block;
 	color: white;
-	@media screen and (min-width: $break-large) {
+
+	@media screen and (min-width: $break-small) {
 		font-size: 1.4rem;
 	}
+	// @media screen and (min-width: $break-large) {
+	// 	font-size: 1.4rem;
+	// }
 }
 
 .container-canvas {
@@ -369,7 +379,7 @@ section, footer {
 	z-index: 4;
 	// overflow: hidden;
 	@media screen and (min-width: $break-large) {
-		padding-top: 14rem;
+		padding-top: 10rem;
 	}
 }
 
