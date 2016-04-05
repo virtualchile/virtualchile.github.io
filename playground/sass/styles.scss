@@ -1122,12 +1122,17 @@ video {
 
 .timeline-item {
 	border: 1px solid $black10;
-	width: 46%;
+	width: 85%;
 	padding: 1rem 1.5rem;
 	border-radius: 4px;
 	margin-top: -2rem;
 	position: relative;
 	background: white;
+	float: right;
+
+	@media screen and (min-width: $break-small) {
+		width: 46%;
+	}
 }
 
 .timeline-item::after {
@@ -1135,29 +1140,52 @@ video {
 	position: absolute;
 	width: 12px;
 	height: 12px;
-	border-top: 1px solid #E6E6E6;
-	border-right: 1px solid #E6E6E6;
+	// border-bottom: 1px solid #E6E6E6;
+	// border-left: 1px solid #E6E6E6;
 	transform: rotate(45deg);
 	background: white;
 	top: 10px;
-	right: -7px;
+	// left: -7px;
+
+	@media screen and (max-width: $break-small) {
+		border-bottom: 1px solid #E6E6E6;
+		border-left: 1px solid #E6E6E6;
+		left: -7px;
+	}
 }
 
+
 .timeline-item-container:nth-of-type(odd) .timeline-item{
-	float: left;
-	text-align: right;
+	@media screen and (min-width: $break-small) {
+		float: left;
+		text-align: right;
+	}
 }
 
 .timeline-item-container:nth-of-type(even) .timeline-item {
-	float: right;
+	@media screen and (min-width: $break-small) {
+		float: right;
+	}
 }
 
 .timeline-item-container:nth-child(even) .timeline-item::after {
-	border-top: none;
-	border-right: none;
-	border-bottom: 1px solid #E6E6E6;
-	border-left: 1px solid #E6E6E6;
-	left: -7px;
+	@media screen and (min-width: $break-small) {
+		border-top: none;
+		border-right: none;
+		border-bottom: 1px solid #E6E6E6;
+		border-left: 1px solid #E6E6E6;
+		left: -7px;
+	}
+}
+
+.timeline-item-container:nth-child(odd) .timeline-item::after {
+	@media screen and (min-width: $break-small) {
+		border-top: 1px solid #E6E6E6;
+		border-right: 1px solid #E6E6E6;
+		border-bottom: none;
+		border-left: none;
+		right: -7px;
+	}
 }
 
 .timeline-item-container:last-of-type .timeline-line {
@@ -1171,26 +1199,39 @@ video {
 	background: white;
 	border: 4px solid $black30;
 	border-radius: 100%;
-	margin: 0 auto;
+	@media screen and (min-width: $break-small) {
+		margin: 0 auto;
+	}
 }
 
 .timeline-line {
 	display: block;
 	width: 4px;
 	height: 100%;
-	margin: 0 auto;
 	background: $black10;
 	position: absolute;
-	left: 0;
+	left: 14px;
 	right: 0;
+
+	@media screen and (min-width: $break-small) {
+		left: 0;
+		margin: 0 auto;
+	}
 }
 
 .timeline-item-title {
-	font-size: 1.7rem;
+	font-size: 1.1rem;
 	margin: 0;
+	@media screen and (min-width: $break-small) {
+		font-size: 1.7rem;
+	}
 }
 
 .timeline-item-time {
+	font-size: 1rem;
+	@media screen and (min-width: $break-small) {
+		font-size: 1.17rem;
+	}
 	margin: 0;
 	color: $color_6;
 }
@@ -1206,6 +1247,9 @@ video {
 	margin-bottom: 0.4rem;
 	font-weight: 400;
 }
+
+
+
 
 //---------------- Misc
 
