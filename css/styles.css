@@ -656,6 +656,14 @@ hr {
   height: auto;
   float: left; }
 
+.partner-link {
+  opacity: 1;
+  transition: all .2s;
+  display: block; }
+
+.partner-link:hover {
+  opacity: 0.8; }
+
 .final-argument-section {
   overflow: hidden;
   background: #213055;

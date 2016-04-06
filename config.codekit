@@ -134,6 +134,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/partner_singular.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6673,
+		"inputAbbreviatedPath": "\/assets\/img\/partner_singular.png",
+		"outputAbbreviatedPath": "\/assets\/img\/partner_singular.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/partner_startupchile.png": {
 		"fileType": 32768,
 		"ignore": 0,
