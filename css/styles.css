@@ -309,7 +309,7 @@ section, footer {
   z-index: 4; }
   @media screen and (min-width: 1160px) {
     .container-canvas {
-      padding-top: 10rem; } }
+      padding-top: 9rem; } }
 
 .introduction-section {
   min-height: 100px;
@@ -753,7 +753,12 @@ hr {
     transition: all .2s; }
 
 .social-icons {
-  margin: 1rem 0; }
+  margin: 1rem auto;
+  text-align: center; }
+
+@media screen and (min-width: 1160px) {
+  .introduction-section .social-icons {
+    margin-top: 3rem; } }
 
 .social-icons a {
   margin-right: .2rem;

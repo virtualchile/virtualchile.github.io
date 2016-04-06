@@ -379,7 +379,7 @@ section, footer {
 	z-index: 4;
 	// overflow: hidden;
 	@media screen and (min-width: $break-large) {
-		padding-top: 10rem;
+		padding-top: 9rem;
 	}
 }
 
@@ -957,7 +957,16 @@ hr {
 }
 
 .social-icons {
-	margin: 1rem 0;
+	margin: 1rem auto;
+	text-align: center;
+}
+
+.introduction-section .social-icons {
+
+	@media screen and (min-width: $break-large) {
+		margin-top: 3rem;
+	}
+
 }
 
 .social-icons a {
