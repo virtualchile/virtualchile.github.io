@@ -51,6 +51,11 @@ $(function($) {
 	    });
 	});
 
+// This is for Facebook Pixel tracking
+
+$('#registration-button').click( function() { fbq('track','InitiateCheckout');});
+$('#facebook-button').click( function() { fbq('track','AddToWishList'); });
+$('#twitter-button').click( function() { fbq('track','AddToCart'); });
 
 
 
