@@ -321,6 +321,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/virtualchile-caption.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25366,
+		"inputAbbreviatedPath": "\/assets\/img\/virtualchile-caption.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/virtualchile-caption.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/virtualchile-logo-dark.png": {
 		"fileType": 32768,
 		"ignore": 0,
