@@ -35,6 +35,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/partner_arcademe.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6882,
+		"inputAbbreviatedPath": "\/assets\/img\/partner_arcademe.png",
+		"outputAbbreviatedPath": "\/assets\/img\/partner_arcademe.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/partner_arges.png": {
 		"fileType": 32768,
 		"ignore": 0,
